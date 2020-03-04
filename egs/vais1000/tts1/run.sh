@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright 2018 Nagoya University (Tomoki Hayashi)
+# Copyright 2019 Kính Phan (@enamoria)
 #  Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
 
 . ./path.sh || exit 1;
@@ -22,17 +22,15 @@ resume=""
 
 # feature extraction related
 fs=16000      # sampling frequency
-fmax=""       # maximum frequency
-fmin=""       # minimum frequency
+fmax=7600     # maximum frequency
+fmin=80       # minimum frequency
 n_mels=80     # number of mel basis
 n_fft=1024    # number of fft points
 n_shift=256   # number of shift points
 win_length="" # window length
 
 # config files
-train_config=conf/train_pytorch_transformer.v1.yaml # you can select from conf or conf/tuning.
-                                               # now we support tacotron2, transformer, and fastspeech
-                                               # see more info in the header of each config.
+train_config=conf/train_transformer.yaml # you can select from conf or conf/tuning.
 decode_config=conf/decode.yaml
 
 # decoding related
