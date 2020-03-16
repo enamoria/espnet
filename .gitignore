@@ -35,6 +35,10 @@ egs/*/*/stft
 egs/*/*/tensorboard
 egs/*/*/wav*
 
+egs/*/*/backup
+egs/*/*/local
+egs/*/*/decode
+
 # tools related
 tools/bin
 tools/include
